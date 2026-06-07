@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@300;400&display=swap" rel="stylesheet">
+<title>Privacy Policy | Sacred Closure</title>
+<style>
+  :root {
+    --bg: #01000a;
+    --purple: #A78BCA;
+    --purple-dim: rgba(167,139,202,0.45);
+    --purple-faint: rgba(167,139,202,0.12);
+    --gold: rgba(196,160,80,0.85);
+    --gold-dim: rgba(196,160,80,0.5);
+    --white: rgba(245,245,247,0.95);
+    --white-dim: rgba(220,200,255,0.72);
+    --white-faint: rgba(220,200,255,0.45);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: twinkle var(--d, 4s) ease-in-out infinite var(--delay, 0s);
+    opacity: 0;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: var(--max-op, 0.4); }
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(1,0,10,0.9) 0%, transparent 100%);
+  }
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--purple-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav-logo:hover { color: var(--purple); }
+
+  .legal-container {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 140px 32px 120px;
+  }
+
+  .legal-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .legal-title {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 300;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .legal-date {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: rgba(167,139,202,0.7);
+    text-align: center;
+    display: block;
+    margin-bottom: 64px;
+  }
+
+  .legal-divider {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, rgba(167,139,202,0.3), transparent);
+    margin: 48px auto;
+  }
+
+  .legal-section {
+    margin-bottom: 48px;
+  }
+
+  .legal-section-number {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .legal-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(13px, 2vw, 15px);
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .legal-section h3 {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white-dim);
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .legal-section p {
+    font-size: 16px;
+    color: rgba(220,200,255,0.72);
+    line-height: 1.85;
+    margin-bottom: 16px;
+  }
+
+  .legal-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+  }
+
+  .legal-section ul li {
+    font-size: 16px;
+    color: rgba(220,200,255,0.72);
+    line-height: 1.85;
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+
+  .legal-card {
+    background: rgba(14,8,32,0.55);
+    border: 1px solid rgba(167,139,202,0.1);
+    border-radius: 24px;
+    padding: 48px 40px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-bottom: 48px;
+  }
+
+  .legal-card .legal-section {
+    margin-bottom: 36px;
+  }
+
+  .legal-card .legal-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .legal-section ul li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: var(--purple-dim);
+  }
+
+  .legal-section ul li b, .legal-section strong {
+    color: var(--white-dim);
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .legal-contact {
+    background: rgba(14,8,32,0.6);
+    border: 1px solid rgba(167,139,202,0.12);
+    border-radius: 20px;
+    padding: 32px 28px;
+    margin-top: 16px;
+  }
+
+  .legal-contact p {
+    margin-bottom: 8px;
+  }
+
+  .legal-contact a {
+    color: var(--purple-dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .legal-contact a:hover { color: var(--purple); }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    padding: 40px 48px;
+    border-top: 1px solid rgba(167,139,202,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .footer-left {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: rgba(167,139,202,0.25);
+    text-transform: uppercase;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: rgba(167,139,202,0.25);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: rgba(167,139,202,0.5); }
+
+  @media (max-width: 640px) {
+    nav { padding: 20px 24px; }
+    .legal-container { padding: 120px 24px 80px; }
+    footer { flex-direction: column; text-align: center; padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+
+<nav>
+  <a href="/" class="nav-logo">Sacred Closure</a>
+</nav>
+<div class="legal-container">
+
+  <h1 class="legal-title">Privacy Policy</h1>
+  <span class="legal-date">Effective Date: June 1, 2026</span>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-card">
+  <div class="legal-section">
+    <p>Sacred Closure is a private space for emotional expression and reflection. This Privacy Policy explains how we collect, use, and disclose information about you when you access or use the Sacred Closure mobile application.</p>
+    <p>Sacred Closure is not a healthcare provider, therapist, crisis service, or medical provider. Information shared within the app is not used to provide medical, psychological, or mental health treatment.</p>
+    <p>We may change this Privacy Policy from time to time. If we make changes, we will update the effective date at the top of this policy.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Collection of Information</h2>
+    <h3>Information You Provide to Us</h3>
+    <p>We collect information when you register for an account, complete onboarding, make a purchase, or otherwise interact with us. The information you provide may include:</p>
+    <ul>
+      <li><b>Account details:</b> your email address and authentication credentials.</li>
+      <li><b>Profile information:</b> your display name and pronoun preference, provided during onboarding.</li>
+      <li><b>Mood and body information:</b> mood scores you provide before and after sessions, and body area responses from somatic check-ins.</li>
+      <li><b>Commitments:</b> any commitments you choose to record at the end of a session.</li>
+      <li><b>Feedback:</b> any feedback or support requests you submit to us.</li>
+    </ul>
+
+    <h3>Information We Collect When You Use the App</h3>
+    <ul>
+      <li><b>Session information:</b> the mode you use, the session status, and related metadata. This does not include the content of your conversations.</li>
+      <li><b>Subscription and purchase information:</b> when you make a purchase, payment is processed by Apple App Store or Google Play. We receive confirmation of your purchase status and subscription tier but do not have access to your payment card details or billing address.</li>
+      <li><b>Usage information:</b> features you access, session frequency, and other aggregated and non-identifiable usage data.</li>
+      <li><b>Device information:</b> your device type, operating system version, and app version.</li>
+    </ul>
+
+    <h3>Information We Generate from Your Sessions</h3>
+    <ul>
+      <li><b>Session insights:</b> AI-generated summaries, identified patterns, journal reflections, and breakthrough moments. These are structured fields derived from your session, not raw conversation messages.</li>
+    </ul>
+    <p>These insights are stored to support your Journey over time and are accessible only to your account.</p>
+
+    <h3>Conversation Content and Session Recovery</h3>
+    <p>The conversation content from Ghost, Ex, Grief, Venting, and Letter modes is not intentionally stored on our servers after the session ends. If you leave the app mid-session without completing or burning the session, a temporary recovery copy of your conversation may be retained to allow you to resume where you left off. When you complete or release (burn) the session, that temporary recovery copy is removed from our active systems.</p>
+    <p>Pattern sessions saved by Sacred Members are stored until you choose to delete them.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Use of Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Create and maintain your account.</li>
+      <li>Provide session responses and generate insights.</li>
+      <li>Allow you to track your emotional journey over time.</li>
+      <li>Process purchases and manage your subscription.</li>
+      <li>Send transactional emails such as account confirmation, password reset, and welcome messages.</li>
+      <li>Understand how the app is used, in aggregated and non-identifiable form, to improve reliability and develop new features.</li>
+    </ul>
+    <p>We do not use conversation content to train, fine-tune, or improve AI models. We do not sell or share your personal information for advertising purposes.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Sharing of Information</h2>
+    <p>We do not sell your personal information. We share information only in the following circumstances:</p>
+    <ul>
+      <li><b>Service providers:</b> we share information with third-party providers who help us operate the app, including database hosting, authentication, AI processing, email delivery, and purchase management.</li>
+      <li><b>Legal requirements:</b> we may disclose information if required by law, court order, subpoena, or governmental request.</li>
+      <li><b>Business transfers:</b> if Sacred Closure or 33 Catalyst Ventures is acquired, merged, or transferred, user information may transfer as part of that transaction.</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <h2>Third-Party Services</h2>
+    <ul>
+      <li><b>Anthropic:</b> AI processing.</li>
+      <li><b>Supabase:</b> database and authentication.</li>
+      <li><b>Resend:</b> transactional email delivery.</li>
+      <li><b>RevenueCat:</b> in-app purchase management.</li>
+      <li><b>Apple:</b> app distribution, payment processing, and device-level services.</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <h2>Data Retention</h2>
+    <p>We retain account information and session records for as long as your account remains active or as necessary to provide the services described in this policy. Saved Pattern sessions remain available until you delete them. Temporary recovery copies of unfinished sessions are retained only as long as necessary to allow you to resume.</p>
+    <p>When your account is deleted, associated data is removed from our active systems and scheduled for removal from backups in accordance with our retention practices.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Data Storage and Security</h2>
+    <p>Your account information, session metadata, and insights are stored using a secure cloud database provider. All data is encrypted in transit and at rest. Access to your data is restricted through authentication and access controls designed to ensure that only authorized access is permitted.</p>
+    <p>While we take reasonable measures to protect your information, no method of electronic storage or transmission is completely secure.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Your Rights and Choices</h2>
+    <ul>
+      <li><b>Access:</b> you can view your account information and session history within the app.</li>
+      <li><b>Deletion:</b> you can delete individual sessions, insights, and your entire account at any time. Account deletion permanently removes all associated data.</li>
+      <li><b>Correction:</b> you can update your display name and pronoun at any time from your Profile.</li>
+      <li><b>Portability:</b> contact us at privacy@sacredclosure.com if you would like a copy of your data.</li>
+    </ul>
+  </div>
+
+  <div class="legal-section">
+    <h2>Additional Regional Rights</h2>
+    <h3>European Union, United Kingdom, and Switzerland (GDPR)</h3>
+    <p>If you are located in the EU, UK, or Switzerland, you have rights including access, correction, erasure, restriction, portability, and the right to lodge a complaint with a supervisory authority. To exercise these rights, contact us at privacy@sacredclosure.com.</p>
+
+    <h3>California (CCPA/CPRA)</h3>
+    <p>California residents have the right to know what personal information is collected, used, and shared; the right to delete personal information; the right to correct inaccurate personal information; and the right to opt out of the sale of personal information. Sacred Closure does not sell personal information. Contact us at privacy@sacredclosure.com to exercise your rights.</p>
+
+    <h3>Other U.S. States</h3>
+    <p>If you reside in Colorado, Connecticut, Utah, Virginia, or other states with comprehensive privacy laws, you may have similar rights. Contact us at privacy@sacredclosure.com.</p>
+
+    <h3>Canada (PIPEDA)</h3>
+    <p>Canadian residents have the right to access their personal information, challenge its accuracy, and withdraw consent. Contact us at privacy@sacredclosure.com.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Children</h2>
+    <p>Sacred Closure is intended for users who are 18 years of age or older. We do not knowingly collect information from anyone under the age of 18. If you believe a minor has created an account, please contact us at privacy@sacredclosure.com.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Contact</h2>
+    <div class="legal-contact">
+      <p>Sacred Closure</p>
+      <p><a href="mailto:privacy@sacredclosure.com">privacy@sacredclosure.com</a> — privacy and data requests</p>
+      <p><a href="mailto:hello@sacredclosure.com">hello@sacredclosure.com</a> — general questions</p>
+    </div>
+  </div>
+
+  <div class="legal-section">
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the effective date at the top of this document. Your continued use of Sacred Closure after changes are posted constitutes your acceptance of the updated policy.</p>
+  </div>
+
+</div>
+<footer>
+  <div class="footer-left">Sacred Closure &nbsp;&middot;&nbsp; 33 Catalyst Ventures &nbsp;&middot;&nbsp; 2026</div>
+  <ul class="footer-links">
+    <li><a href="/privacy">Privacy Policy</a></li>
+    <li><a href="/terms">Terms of Service</a></li>
+    <li><a href="mailto:hello@sacredclosure.com">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+  const container = document.getElementById('stars');
+  for (let i = 0; i < 100; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    const size = Math.random() * 1.8 + 0.4;
+    star.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--d:${Math.random()*5+3}s;--delay:-${Math.random()*8}s;--max-op:${Math.random()*0.4+0.1};`;
+    container.appendChild(star);
+  }
+</script>
+</body>
+</html>
