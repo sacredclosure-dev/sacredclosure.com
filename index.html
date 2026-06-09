@@ -13,17 +13,16 @@
   :root {
     --bg: #01000a;
     --purple: #A78BCA;
-    --purple-dim: rgba(167,139,202,0.45);
-    --purple-faint: rgba(167,139,202,0.12);
-    --gold: rgba(196,160,80,0.85);
-    --gold-dim: rgba(196,160,80,0.5);
+    --purple-dim: rgba(167,139,202,0.65);
+    --purple-faint: rgba(167,139,202,0.18);
+    --gold: rgba(196,160,80,0.95);
+    --gold-dim: rgba(196,160,80,0.75);
     --white: rgba(245,245,247,0.95);
-    --white-dim: rgba(220,200,255,0.72);
-    --white-faint: rgba(220,200,255,0.45);
+    --white-dim: rgba(220,200,255,0.82);
+    --white-faint: rgba(220,200,255,0.60);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -42,7 +41,6 @@
     z-index: 0;
     overflow: hidden;
   }
-
   .star {
     position: absolute;
     border-radius: 50%;
@@ -50,7 +48,6 @@
     animation: twinkle var(--d, 4s) ease-in-out infinite var(--delay, 0s);
     opacity: 0;
   }
-
   @keyframes twinkle {
     0%, 100% { opacity: 0; }
     50% { opacity: var(--max-op, 0.4); }
@@ -59,9 +56,7 @@
   /* ── NAV ───────────────────────────────────────────────────────── */
   nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     z-index: 100;
     padding: 24px 48px;
     display: flex;
@@ -69,34 +64,30 @@
     align-items: center;
     background: linear-gradient(to bottom, rgba(1,0,10,0.9) 0%, transparent 100%);
   }
-
   .nav-logo {
     font-family: 'Cinzel', serif;
     font-weight: 300;
-    font-size: 13px;
+    font-size: 16px;
     letter-spacing: 4px;
     color: var(--purple-dim);
     text-decoration: none;
     text-transform: uppercase;
   }
-
   .nav-links {
     display: flex;
     gap: 40px;
     list-style: none;
   }
-
   .nav-links a {
     font-family: 'Cinzel', serif;
     font-weight: 300;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 2.5px;
     color: var(--purple-dim);
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.3s;
   }
-
   .nav-links a:hover { color: var(--purple); }
 
   /* ── HERO ──────────────────────────────────────────────────────── */
@@ -111,29 +102,25 @@
     padding: 120px 32px 80px;
     text-align: center;
   }
-
   .hero-flower {
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     animation: pulse 6s ease-in-out infinite;
   }
-
   @keyframes pulse {
     0%, 100% { opacity: 0.35; transform: scale(1); }
     50% { opacity: 0.55; transform: scale(1.04); }
   }
-
   .hero-eyebrow {
     font-family: 'Cinzel', serif;
     font-weight: 300;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 4px;
     color: var(--purple-dim);
     text-transform: uppercase;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
     animation: fadeUp 1.2s ease forwards;
     opacity: 0;
   }
-
   .hero-title {
     font-size: clamp(36px, 6vw, 68px);
     font-weight: 300;
@@ -144,23 +131,20 @@
     animation: fadeUp 1.2s ease 0.2s forwards;
     opacity: 0;
   }
-
   .hero-title em {
     font-style: italic;
     color: var(--white-dim);
   }
-
   .hero-sub {
-    font-size: clamp(18px, 2.5vw, 24px);
+    font-size: clamp(18px, 2.5vw, 23px);
     font-style: italic;
     color: var(--white-faint);
     line-height: 1.7;
-    max-width: 560px;
+    max-width: 600px;
     margin-bottom: 56px;
     animation: fadeUp 1.2s ease 0.4s forwards;
     opacity: 0;
   }
-
   .hero-cta {
     display: inline-flex;
     align-items: center;
@@ -173,7 +157,7 @@
     font-weight: 300;
     font-size: 11px;
     letter-spacing: 3px;
-    color: rgba(220,200,255,0.8);
+    color: rgba(220,200,255,0.9);
     text-decoration: none;
     text-transform: uppercase;
     transition: all 0.4s;
@@ -181,23 +165,20 @@
     opacity: 0;
     cursor: pointer;
   }
-
   .hero-cta:hover {
     background: rgba(90,52,140,0.8);
     border-color: rgba(167,139,202,0.5);
     color: var(--white);
     transform: translateY(-2px);
   }
-
   .hero-cta-note {
-    font-size: 13px;
+    font-size: 14px;
     font-style: italic;
-    color: rgba(167,139,202,0.3);
+    color: rgba(167,139,202,0.45);
     margin-top: 16px;
     animation: fadeUp 1.2s ease 0.8s forwards;
     opacity: 0;
   }
-
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -213,6 +194,67 @@
     z-index: 1;
   }
 
+  /* ── SECTION LABEL ─────────────────────────────────────────────── */
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 3.5px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    display: block;
+  }
+
+  /* ── WHY UNFINISHED ────────────────────────────────────────────── */
+  .unfinished {
+    position: relative;
+    z-index: 1;
+    padding: 80px 32px;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .unfinished-body {
+    font-size: clamp(18px, 2.5vw, 23px);
+    font-weight: 300;
+    color: var(--white-dim);
+    line-height: 1.85;
+  }
+
+  /* ── CLOSURE GAP ───────────────────────────────────────────────── */
+  .closure-gap {
+    position: relative;
+    z-index: 1;
+    padding: 40px 32px 80px;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .closure-gap-body {
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white-faint);
+    line-height: 1.75;
+  }
+
+  /* ── DECLARATION ───────────────────────────────────────────────── */
+  .declaration {
+    position: relative;
+    z-index: 1;
+    padding: 80px 32px;
+    text-align: center;
+  }
+  .declaration-line {
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--white);
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+
   /* ── PHILOSOPHY ────────────────────────────────────────────────── */
   .philosophy {
     position: relative;
@@ -222,30 +264,24 @@
     margin: 0 auto;
     text-align: center;
   }
-
-  .section-label {
-    font-family: 'Cinzel', serif;
-    font-weight: 300;
-    font-size: 9px;
-    letter-spacing: 3px;
-    color: var(--gold-dim);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    display: block;
-  }
-
-  .philosophy-line {
-    font-size: clamp(22px, 4vw, 34px);
+  .philosophy-statement {
+    font-size: clamp(24px, 4vw, 36px);
     font-weight: 300;
     line-height: 1.55;
     color: var(--white);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
-
-  .philosophy-line.italic {
+  .philosophy-statement.italic {
     font-style: italic;
     color: var(--white-dim);
-    font-size: clamp(18px, 3vw, 26px);
+    font-size: clamp(20px, 3vw, 28px);
+    margin-bottom: 40px;
+  }
+  .philosophy-body {
+    font-size: clamp(17px, 2.2vw, 21px);
+    font-weight: 300;
+    color: var(--white-faint);
+    line-height: 1.85;
   }
 
   /* ── MODES ─────────────────────────────────────────────────────── */
@@ -256,57 +292,56 @@
     max-width: 1000px;
     margin: 0 auto;
   }
-
   .modes-header {
     text-align: center;
     margin-bottom: 64px;
   }
-
+  .modes-title {
+    font-size: clamp(28px, 4.5vw, 44px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.4;
+  }
   .modes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
   }
-
   .mode-card {
     background: rgba(14,8,32,0.6);
-    border: 1px solid rgba(167,139,202,0.12);
+    border: 1px solid rgba(167,139,202,0.15);
     border-radius: 20px;
-    padding: 28px 24px;
+    padding: 32px 28px;
     transition: all 0.4s;
     cursor: default;
   }
-
   .mode-card:hover {
-    border-color: rgba(167,139,202,0.25);
+    border-color: rgba(167,139,202,0.3);
     background: rgba(30,15,60,0.7);
     transform: translateY(-4px);
   }
-
   .mode-name {
     font-family: 'Cinzel', serif;
-    font-weight: 300;
-    font-size: 10px;
+    font-weight: 400;
+    font-size: 13px;
     letter-spacing: 3px;
     color: var(--gold-dim);
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     display: block;
   }
-
   .mode-title {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
-    color: var(--white);
-    margin-bottom: 10px;
-    line-height: 1.3;
-  }
-
-  .mode-desc {
-    font-size: 15px;
+    color: var(--white-dim);
+    margin-bottom: 12px;
+    line-height: 1.35;
     font-style: italic;
+  }
+  .mode-desc {
+    font-size: 16px;
     color: var(--white-faint);
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
   /* ── INSIGHTS ──────────────────────────────────────────────────── */
@@ -314,27 +349,22 @@
     position: relative;
     z-index: 1;
     padding: 80px 32px;
-    max-width: 720px;
+    max-width: 660px;
     margin: 0 auto;
     text-align: center;
   }
-
   .insights-quote {
-    font-size: clamp(20px, 3.5vw, 30px);
+    font-size: clamp(22px, 3.5vw, 32px);
     font-style: italic;
     font-weight: 300;
     color: var(--white-dim);
     line-height: 1.6;
-    margin-bottom: 32px;
-    padding: 0 20px;
-    border-left: 2px solid rgba(167,139,202,0.3);
-    text-align: left;
+    margin-bottom: 36px;
   }
-
   .insights-body {
-    font-size: 17px;
+    font-size: clamp(17px, 2.2vw, 20px);
     color: var(--white-faint);
-    line-height: 1.8;
+    line-height: 1.9;
   }
 
   /* ── PRIVACY ───────────────────────────────────────────────────── */
@@ -345,41 +375,34 @@
     max-width: 800px;
     margin: 0 auto;
   }
-
   .privacy-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 32px;
-    margin-top: 48px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 56px;
   }
-
-  .privacy-item {
-    text-align: center;
-  }
-
+  .privacy-item { text-align: center; }
   .privacy-icon {
-    font-size: 28px;
-    margin-bottom: 16px;
+    font-size: 32px;
+    margin-bottom: 18px;
     display: block;
-    opacity: 0.7;
+    opacity: 0.85;
   }
-
   .privacy-title {
     font-family: 'Cinzel', serif;
-    font-weight: 300;
-    font-size: 9px;
-    letter-spacing: 2.5px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 3px;
     color: var(--purple-dim);
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     display: block;
   }
-
   .privacy-body {
-    font-size: 16px;
+    font-size: 17px;
     font-style: italic;
     color: var(--white-faint);
-    line-height: 1.65;
+    line-height: 1.75;
   }
 
   /* ── THERAPISTS ────────────────────────────────────────────────── */
@@ -391,47 +414,42 @@
     margin: 0 auto;
     text-align: center;
   }
-
   .therapists-box {
     background: rgba(14,8,32,0.6);
-    border: 1px solid rgba(167,139,202,0.15);
+    border: 1px solid rgba(167,139,202,0.18);
     border-radius: 24px;
     padding: 48px 40px;
     margin-top: 48px;
   }
-
   .therapists-title {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 300;
     color: var(--white);
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     line-height: 1.4;
   }
-
   .therapists-body {
-    font-size: 16px;
+    font-size: 17px;
     font-style: italic;
     color: var(--white-faint);
-    line-height: 1.75;
-    margin-bottom: 28px;
+    line-height: 1.8;
+    margin-bottom: 32px;
   }
-
   .therapists-email {
     font-family: 'Cinzel', serif;
     font-weight: 300;
-    font-size: 10px;
-    letter-spacing: 2px;
+    font-size: 11px;
+    letter-spacing: 2.5px;
     color: var(--purple-dim);
     text-decoration: none;
     text-transform: uppercase;
-    border-bottom: 1px solid rgba(167,139,202,0.2);
-    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(167,139,202,0.25);
+    padding-bottom: 3px;
     transition: color 0.3s, border-color 0.3s;
   }
-
   .therapists-email:hover {
     color: var(--purple);
-    border-color: rgba(167,139,202,0.5);
+    border-color: rgba(167,139,202,0.6);
   }
 
   /* ── CLOSING ───────────────────────────────────────────────────── */
@@ -441,23 +459,21 @@
     padding: 100px 32px 60px;
     text-align: center;
   }
-
   .closing-title {
-    font-size: clamp(28px, 5vw, 52px);
+    font-size: clamp(32px, 5vw, 56px);
     font-weight: 300;
     font-style: italic;
     color: var(--white);
     line-height: 1.4;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     max-width: 680px;
     margin-left: auto;
     margin-right: auto;
   }
-
   .closing-sub {
-    font-size: 16px;
+    font-size: 15px;
     font-style: italic;
-    color: var(--white-faint);
+    color: rgba(220,200,255,0.35);
     margin-bottom: 48px;
   }
 
@@ -466,41 +482,37 @@
     position: relative;
     z-index: 1;
     padding: 40px 48px;
-    border-top: 1px solid rgba(167,139,202,0.08);
+    border-top: 1px solid rgba(167,139,202,0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 16px;
   }
-
   .footer-left {
     font-family: 'Cinzel', serif;
     font-weight: 300;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 3px;
-    color: rgba(167,139,202,0.6);
+    color: var(--purple-dim);
     text-transform: uppercase;
   }
-
   .footer-links {
     display: flex;
     gap: 32px;
     list-style: none;
   }
-
   .footer-links a {
     font-family: 'Cinzel', serif;
     font-weight: 300;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 2px;
-    color: rgba(167,139,202,0.6);
+    color: var(--purple-dim);
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.3s;
   }
-
-  .footer-links a:hover { color: rgba(167,139,202,0.5); }
+  .footer-links a:hover { color: var(--purple); }
 
   /* ── RESPONSIVE ────────────────────────────────────────────────── */
   @media (max-width: 640px) {
@@ -508,6 +520,8 @@
     .nav-links { display: none; }
     .therapists-box { padding: 32px 24px; }
     footer { flex-direction: column; text-align: center; padding: 32px 24px; }
+    .privacy-grid { grid-template-columns: 1fr; }
+    .declaration-line { font-size: clamp(32px, 8vw, 52px); }
   }
 
 </style>
@@ -530,7 +544,7 @@
 <!-- Hero -->
 <section class="hero">
 
-  <svg class="hero-flower" width="80" height="80" viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg">
+  <svg class="hero-flower" width="120" height="120" viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg">
     <g opacity="0.9">
       <circle cx="0" cy="0" r="18" stroke="#EDE0FF" stroke-width="1" fill="none"/>
       <circle cx="18" cy="0" r="18" stroke="#A78BCA" stroke-width="0.8" fill="none" opacity="0.8"/>
@@ -545,12 +559,12 @@
   <p class="hero-eyebrow">Sacred Closure</p>
 
   <h1 class="hero-title">
-    The conversations that were never had.<br>
-    <em>The words that had nowhere to go.</em>
+    The conversation never happened.<br>
+    <em>The feelings never left.</em>
   </h1>
 
   <p class="hero-sub">
-    Some things stay with us because they were never fully expressed.
+    A private space to say what was never heard, understand what keeps repeating, and release what you've been carrying.
   </p>
 
   <a href="#" class="hero-cta">Coming to the App Store</a>
@@ -560,15 +574,31 @@
 
 <div class="section-divider"></div>
 
+<!-- Why Unfinished Conversations Stay With Us -->
+<section class="unfinished">
+  <p class="unfinished-body">We carry unfinished conversations differently than finished ones. They linger in our thoughts, resurface in quiet moments, and follow us into new chapters. When something feels unresolved, the mind often continues searching for the ending it never got.</p>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Closure Gap -->
+<section class="closure-gap">
+  <p class="closure-gap-body">Many of us spend years waiting for answers, apologies, explanations, or goodbyes that never come. We wait for closure from someone who may never be able to give it.</p>
+</section>
+
+<!-- Declaration -->
+<section class="declaration">
+  <p class="declaration-line">Closure isn't given. It's found.</p>
+</section>
+
+<div class="section-divider"></div>
+
 <!-- Philosophy -->
 <section class="philosophy">
   <span class="section-label">What Sacred Closure Is</span>
-  <p class="philosophy-line">Sacred Closure is not just about getting feelings out.</p>
-  <p class="philosophy-line italic">It is about understanding what those feelings are connected to.</p>
-  <br>
-  <p class="philosophy-line italic" style="font-size: clamp(16px, 2.5vw, 20px); color: rgba(220,200,255,0.45); margin-top: 16px;">
-    A private AI-powered space for emotional healing and closure after grief, breakups, ghosting, trauma, and unresolved relationships. Not therapy. Not a way to get someone back. A space built on compassion, honesty, and release.
-  </p>
+  <p class="philosophy-statement">Sacred Closure is not just about getting feelings out.</p>
+  <p class="philosophy-statement italic">It helps reveal the deeper patterns, relationship experiences, and nervous system responses connected to what you're carrying.</p>
+  <p class="philosophy-body">Expression is only part of the journey. Through reflection and a deeper understanding of what lies beneath our thoughts, feelings, and experiences, we can gain greater clarity... the kind of clarity that allows us to find closure from within.</p>
 </section>
 
 <div class="section-divider"></div>
@@ -577,53 +607,60 @@
 <section class="modes" id="modes">
   <div class="modes-header">
     <span class="section-label">The Modes</span>
-    <h2 style="font-size: clamp(24px, 4vw, 38px); font-weight: 300; color: var(--white); line-height: 1.4;">Six spaces. One container.</h2>
+    <h2 class="modes-title">Six spaces. One container.</h2>
   </div>
 
   <div class="modes-grid">
+
     <div class="mode-card">
       <span class="mode-name">The Ghost</span>
-      <div class="mode-title">The conversation you never got to have.</div>
-      <p class="mode-desc">With the one who went silent. Finally say what you deserved to say.</p>
+      <div class="mode-title">For the silence that was never explained.</div>
+      <p class="mode-desc">The conversation you never got to have. Finally express what you didn't get the chance to.</p>
     </div>
+
     <div class="mode-card">
       <span class="mode-name">The Ex</span>
-      <div class="mode-title">Finally say what you never could.</div>
-      <p class="mode-desc">A healed voice that is accountable, not warm. The truth of what happened.</p>
+      <div class="mode-title">For the relationship that left a mark.</div>
+      <p class="mode-desc">Whether it ended with unanswered questions, betrayal, or a painful goodbye. Revisit what happened, express what was left unsaid, and understand what you're still carrying.</p>
     </div>
+
     <div class="mode-card">
       <span class="mode-name">The Grief</span>
-      <div class="mode-title">For the ones you can no longer reach.</div>
-      <p class="mode-desc">The goodbye that never came. The words that lived in you unspoken.</p>
+      <div class="mode-title">The ones you lost and the ones who were never really there.</div>
+      <p class="mode-desc">Whether you're grieving the loss of a loved one or a complicated relationship that never found resolution, finally say the words you've been holding inside.</p>
     </div>
+
     <div class="mode-card">
       <span class="mode-name">Open Venting</span>
-      <div class="mode-title">A witness. Nothing more.</div>
-      <p class="mode-desc">Say anything. No judgment, no advice unless you ask.</p>
+      <div class="mode-title">A space to be heard.</div>
+      <p class="mode-desc">Speak freely. No judgment, no advice unless you ask.</p>
     </div>
+
     <div class="mode-card">
       <span class="mode-name">Letter Companion</span>
-      <div class="mode-title">The unsent letter.</div>
-      <p class="mode-desc">Write the words you have been carrying inside. Finally placed somewhere real.</p>
+      <div class="mode-title">For the unsent letter that's been living inside you.</div>
+      <p class="mode-desc">Some people know exactly what they want to say. Others are still finding the words. Letter Companion meets you where you are and helps you bring the letter to life.</p>
     </div>
+
     <div class="mode-card">
       <span class="mode-name">The Pattern</span>
-      <div class="mode-title">Understand why it felt the way it did.</div>
-      <p class="mode-desc">Not just what happened. Why it felt so familiar. Why letting go has been hard.</p>
+      <div class="mode-title">Understand the roots of what you feel.</div>
+      <p class="mode-desc">Explore the patterns, emotional dynamics, and life experiences that may have shaped how you relate, react, and connect.</p>
     </div>
+
   </div>
 </section>
 
 <div class="section-divider"></div>
 
-<!-- Insights -->
+<!-- Insights / What You Receive -->
 <section class="insights">
   <span class="section-label">What You Receive</span>
-  <blockquote class="insights-quote">
-    You do not just speak here. You receive something back.
-  </blockquote>
+  <p class="insights-quote">You do not just speak here. You receive something back.</p>
   <p class="insights-body">
-    After every session, Sacred Closure reflects what surfaced. The patterns that kept appearing. The moments that landed. What shifted. These insights accumulate in your private Journey, becoming a record of what keeps showing up and what is beginning to change.
+    After every session, Sacred Closure reflects back what emerged. The words that mattered. The patterns beneath them. The insights, shifts, and realizations that surfaced along the way.<br><br>
+    Over time, these reflections become part of your private Journey. A record of what keeps showing up. What is beginning to change. What you have come to understand.<br><br>
+    Not to be tracked. To be witnessed.
   </p>
 </section>
 
@@ -633,24 +670,18 @@
 <section class="privacy" id="privacy">
   <div style="text-align:center;">
     <span class="section-label">Built for Privacy</span>
-    <h2 style="font-size: clamp(24px, 4vw, 36px); font-weight: 300; color: var(--white); line-height: 1.4; max-width: 560px; margin: 0 auto;">Your pain is not a product.</h2>
+    <h2 style="font-size: clamp(26px, 4vw, 40px); font-weight: 300; color: var(--white); line-height: 1.4; max-width: 560px; margin: 0 auto;">Your pain is not a product.</h2>
   </div>
-
   <div class="privacy-grid">
-    <div class="privacy-item">
-      <span class="privacy-icon">🔥</span>
-      <span class="privacy-title">The Burn Ritual</span>
-      <p class="privacy-body">At the end of every session, choose to release. Fire sweeps across the conversation. The data is deleted. The weight is set free.</p>
-    </div>
     <div class="privacy-item">
       <span class="privacy-icon">🔒</span>
       <span class="privacy-title">No Storage</span>
-      <p class="privacy-body">Conversation content is not stored after a session ends. When you release, it is gone. Pattern sessions saved by Sacred Members are stored until you choose to delete them.</p>
+      <p class="privacy-body">Conversation content is not stored after a session ends. Once you release a session, it is gone. Pattern sessions saved by Sacred Members remain available until you choose to delete them.</p>
     </div>
     <div class="privacy-item">
       <span class="privacy-icon">✦</span>
       <span class="privacy-title">No Advertising</span>
-      <p class="privacy-body">No ads. No data selling. No psychographic profiling. What you share here belongs only to you.</p>
+      <p class="privacy-body">No ads. No data selling. What you share here is never used to build a profile of you. It belongs only to you.</p>
     </div>
   </div>
 </section>
@@ -663,7 +694,9 @@
   <div class="therapists-box">
     <h2 class="therapists-title">A resource for the space between sessions.</h2>
     <p class="therapists-body">
-      Sacred Closure has shown promising potential as a between-session reflection tool for clients processing grief, relationship endings, and unresolved emotional experiences. We are exploring thoughtful ways to support clinicians who want to learn more.
+      Sacred Closure is designed as a between-session reflection tool for clients processing grief, relationship endings, and unresolved emotional experiences.<br><br>
+      We are not a therapy replacement. We are a bridge between sessions, helping clients continue exploring what is surfacing through expression, reflection, and deeper understanding.<br><br>
+      If you see a place for Sacred Closure within your practice, we'd love to hear from you. Contact us to learn more.
     </p>
     <a href="mailto:hello@sacredclosure.com" class="therapists-email">hello@sacredclosure.com</a>
   </div>
@@ -674,7 +707,6 @@
 <!-- Closing -->
 <section class="closing">
   <h2 class="closing-title">Come in carrying it.<br>Leave without it.</h2>
-  <p class="closing-sub">Sacred Closure is not therapy and is not intended to replace professional mental health care.</p>
   <a href="#" class="hero-cta" style="animation: none; opacity: 1;">Coming to the App Store</a>
 </section>
 
@@ -686,29 +718,24 @@
     <li><a href="terms.html">Terms of Service</a></li>
     <li><a href="mailto:hello@sacredclosure.com">Contact</a></li>
   </ul>
+  <p style="width:100%; text-align:center; font-size:12px; font-style:italic; color:rgba(220,200,255,0.28); margin-top:16px;">Sacred Closure is not therapy and is not intended to replace professional mental health care.</p>
 </footer>
 
 <script>
-  // Generate stars
   const container = document.getElementById('stars');
-  const count = 120;
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < 120; i++) {
     const star = document.createElement('div');
     star.className = 'star';
     const size = Math.random() * 1.8 + 0.4;
     star.style.cssText = `
-      width: ${size}px;
-      height: ${size}px;
-      left: ${Math.random() * 100}%;
-      top: ${Math.random() * 100}%;
-      --d: ${Math.random() * 5 + 3}s;
-      --delay: -${Math.random() * 8}s;
-      --max-op: ${Math.random() * 0.4 + 0.1};
+      width:${size}px; height:${size}px;
+      left:${Math.random()*100}%; top:${Math.random()*100}%;
+      --d:${Math.random()*5+3}s; --delay:-${Math.random()*8}s;
+      --max-op:${Math.random()*0.4+0.1};
     `;
     container.appendChild(star);
   }
 
-  // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -718,7 +745,9 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.mode-card, .privacy-item, .therapists-box, .philosophy-line, .insights-quote, .insights-body').forEach(el => {
+  document.querySelectorAll(
+    '.mode-card, .privacy-item, .therapists-box, .philosophy-statement, .philosophy-body, .insights-quote, .insights-body, .unfinished-body, .closure-gap-body, .declaration-line'
+  ).forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
     el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
