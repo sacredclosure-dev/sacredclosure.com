@@ -107,15 +107,15 @@
     animation: pulse 6s ease-in-out infinite;
   }
   @keyframes pulse {
-    0%, 100% { opacity: 0.35; transform: scale(1); }
-    50% { opacity: 0.55; transform: scale(1.04); }
+    0%, 100% { opacity: 0.65; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(1.04); }
   }
   .hero-eyebrow {
     font-family: 'Cinzel', serif;
     font-weight: 300;
     font-size: 11px;
     letter-spacing: 4px;
-    color: var(--purple-dim);
+    color: var(--white-dim);
     text-transform: uppercase;
     margin-bottom: 32px;
     animation: fadeUp 1.2s ease forwards;
@@ -136,9 +136,8 @@
     color: var(--white-dim);
   }
   .hero-sub {
-    font-size: clamp(18px, 2.5vw, 23px);
-    font-style: italic;
-    color: var(--white-faint);
+    font-size: clamp(20px, 2.5vw, 23px);
+    color: var(--white);
     line-height: 1.7;
     max-width: 600px;
     margin-bottom: 56px;
@@ -216,9 +215,9 @@
     text-align: center;
   }
   .unfinished-body {
-    font-size: clamp(18px, 2.5vw, 23px);
+    font-size: clamp(20px, 2.5vw, 23px);
     font-weight: 300;
-    color: var(--white-dim);
+    color: var(--white);
     line-height: 1.85;
   }
 
@@ -232,10 +231,9 @@
     text-align: center;
   }
   .closure-gap-body {
-    font-size: clamp(20px, 3vw, 26px);
+    font-size: clamp(22px, 3vw, 26px);
     font-weight: 300;
-    font-style: italic;
-    color: var(--white-faint);
+    color: var(--white);
     line-height: 1.75;
   }
 
@@ -278,10 +276,11 @@
     margin-bottom: 40px;
   }
   .philosophy-body {
-    font-size: clamp(17px, 2.2vw, 21px);
+    font-size: clamp(20px, 2.5vw, 23px);
     font-weight: 300;
-    color: var(--white-faint);
+    color: var(--white);
     line-height: 1.85;
+    margin-bottom: 28px;
   }
 
   /* ── MODES ─────────────────────────────────────────────────────── */
@@ -339,8 +338,8 @@
     font-style: italic;
   }
   .mode-desc {
-    font-size: 16px;
-    color: var(--white-faint);
+    font-size: clamp(18px, 2vw, 19px);
+    color: var(--white);
     line-height: 1.7;
   }
 
@@ -391,7 +390,7 @@
   .privacy-title {
     font-family: 'Cinzel', serif;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 15px;
     letter-spacing: 3px;
     color: var(--purple-dim);
     text-transform: uppercase;
@@ -399,9 +398,8 @@
     display: block;
   }
   .privacy-body {
-    font-size: 17px;
-    font-style: italic;
-    color: var(--white-faint);
+    font-size: clamp(20px, 2.5vw, 23px);
+    color: var(--white);
     line-height: 1.75;
   }
 
@@ -429,9 +427,8 @@
     line-height: 1.4;
   }
   .therapists-body {
-    font-size: 17px;
-    font-style: italic;
-    color: var(--white-faint);
+    font-size: clamp(20px, 2.5vw, 23px);
+    color: var(--white);
     line-height: 1.8;
     margin-bottom: 32px;
   }
@@ -564,7 +561,7 @@
   </h1>
 
   <p class="hero-sub">
-    A private space to say what was never heard, understand what keeps repeating, and release what you've been carrying.
+    A private space to say what was never heard, understand what still holds you there, and release what you've been carrying.
   </p>
 
   <a href="#" class="hero-cta">Coming to the App Store</a>
@@ -596,9 +593,13 @@
 <!-- Philosophy -->
 <section class="philosophy">
   <span class="section-label">What Sacred Closure Is</span>
-  <p style="font-size: clamp(20px, 3vw, 28px); font-weight: 300; color: var(--white); line-height: 1.7; margin-bottom: 28px;">Sacred Closure is a private space for emotional expression, reflection, and deeper understanding. It was built for the unresolved relationships, losses, and silences that stay with you long after they happened.</p>
-  <p style="font-size: clamp(17px, 2.4vw, 22px); font-style: italic; font-weight: 300; color: var(--white-dim); line-height: 1.75; margin-bottom: 28px;">Every session goes beyond expression alone. It helps reveal relationship dynamics, how those relationships shaped you, and the patterns that surfaced, offering insight not only into what happened, but into what may have been influencing your relationships all along.</p>
-  <p class="philosophy-body">Through reflection and a deeper understanding of what lies beneath our thoughts, feelings, and experiences, we can gain greater clarity. The kind of clarity that allows us to find closure from within.</p>
+  <p class="philosophy-body">Sacred Closure is a private space for emotional expression, reflection, and deeper understanding.</p>
+  <p class="philosophy-body">Through AI-guided conversations, it gives you a space to express what was left unsaid, explore what you're carrying, and reflect on what may still feel unresolved.</p>
+  <p class="philosophy-body">It was built for the relationships, losses, and unanswered moments that never felt fully resolved.</p>
+  <p class="philosophy-body">Every session goes beyond expression alone. Sacred Closure helps you reflect on what happened, what you needed, and what may still be keeping the experience alive within you.</p>
+  <p class="philosophy-body">Over time, deeper patterns may begin to surface, offering insight into not only the relationship itself, but what you may be carrying forward from it.</p>
+  <p class="philosophy-body">Through expression and reflection, we begin to understand what lies beneath what we're carrying. And with understanding comes clarity.</p>
+  <p class="philosophy-statement italic">The kind of clarity that allows closure to come from within.</p>
 </section>
 
 <div class="section-divider"></div>
@@ -657,19 +658,15 @@
 <!-- Privacy -->
 <section class="privacy" id="privacy">
   <div style="text-align:center;">
-    <span class="section-label">Built for Privacy</span>
+    <span class="section-label">Private by Design</span>
     <h2 style="font-size: clamp(26px, 4vw, 40px); font-weight: 300; color: var(--white); line-height: 1.4; max-width: 560px; margin: 0 auto;">Your pain is not a product.</h2>
+    <p style="font-size: clamp(20px, 2.5vw, 23px); font-weight: 300; color: var(--white); line-height: 1.75; max-width: 480px; margin: 24px auto 0;">Your conversations aren't kept after you release them, and nothing you share is ever used to train AI models, whether you keep it or not. What you choose to save stays only as long as you want it to.</p>
   </div>
   <div class="privacy-grid">
     <div class="privacy-item">
-      <span class="privacy-icon">🔒</span>
-      <span class="privacy-title">No Storage</span>
-      <p class="privacy-body">Conversation content is not stored after a session ends. Once you release a session, it is gone. Pattern sessions saved by Sacred Members remain available until you choose to delete them.</p>
-    </div>
-    <div class="privacy-item">
       <span class="privacy-icon">✦</span>
       <span class="privacy-title">No Advertising</span>
-      <p class="privacy-body">No ads. No data selling. What you share here is never used to build a profile of you. It belongs only to you.</p>
+      <p class="privacy-body">No ads. No selling what you share. Your private moments aren't someone else's business.</p>
     </div>
   </div>
 </section>
@@ -702,11 +699,12 @@
 <footer>
   <div class="footer-left">Sacred Closure &nbsp;&middot;&nbsp; 33 Catalyst Ventures &nbsp;&middot;&nbsp; 2026</div>
   <ul class="footer-links">
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="terms.html">Terms of Service</a></li>
+    <li><a href="/privacy">Privacy Policy</a></li>
+    <li><a href="/consumer-health-data-policy">Consumer Health Data Policy</a></li>
+    <li><a href="/terms">Terms of Service</a></li>
     <li><a href="mailto:hello@sacredclosure.com">Contact</a></li>
   </ul>
-  <p style="width:100%; text-align:center; font-size:12px; font-style:italic; color:rgba(220,200,255,0.28); margin-top:16px;">Sacred Closure is not therapy and is not intended to replace professional mental health care.</p>
+  <p style="width:100%; text-align:center; font-size:12px; font-style:italic; color:var(--white-faint); margin-top:16px;">Sacred Closure is not therapy and is not intended to replace professional mental health care.</p>
 </footer>
 
 <script>

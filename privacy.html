@@ -283,15 +283,15 @@
 <div class="legal-container">
 
   <h1 class="legal-title">Privacy Policy</h1>
-  <span class="legal-date">Effective Date: June 1, 2026</span>
+  <span class="legal-date">Effective Date: October 4, 2026</span>
 
   <div class="legal-divider"></div>
 
   <div class="legal-card">
   <div class="legal-section">
     <p>Sacred Closure is a private space for emotional expression and reflection. This Privacy Policy explains how we collect, use, and disclose information about you when you access or use the Sacred Closure mobile application.</p>
-    <p>Sacred Closure is not a healthcare provider, therapist, crisis service, or medical provider. Information shared within the app is not used to provide medical, psychological, or mental health treatment.</p>
-    <p>We may change this Privacy Policy from time to time. If we make changes, we will update the effective date at the top of this policy.</p>
+    <p>Sacred Closure is not a healthcare provider, therapist, crisis service, or medical provider. Information shared within the app is not used to provide medical, psychological, or mental health treatment. If you are in crisis, the app will direct you to the 988 Suicide &amp; Crisis Lifeline.</p>
+    <p>When you use Ghost, Ex, Grief, or Venting mode, you are speaking with an AI, not the person you're processing something with, and not a licensed professional. AI-generated responses reflect what you shared, not what that person actually thought, felt, said, or did.</p>
   </div>
 
   <div class="legal-section">
@@ -303,6 +303,9 @@
       <li><b>Profile information:</b> your display name and pronoun preference, provided during onboarding.</li>
       <li><b>Mood and body information:</b> mood scores you provide before and after sessions, and body area responses from somatic check-ins.</li>
       <li><b>Commitments:</b> any commitments you choose to record at the end of a session.</li>
+      <li><b>Session intake:</b> when you begin a Ghost, Ex, or Grief session, information you provide about the relationship and the person involved, including a name you use to refer to them.</li>
+      <li><b>Reflection answers:</b> your written response to the reflection question at the end of a session. These are saved by design, shown in your Journey, and not deleted when a session is burned.</li>
+      <li><b>Letters:</b> content you write in Letter Companion mode, saved unless you choose to burn it.</li>
       <li><b>Feedback:</b> any feedback or support requests you submit to us.</li>
     </ul>
 
@@ -310,19 +313,19 @@
     <ul>
       <li><b>Session information:</b> the mode you use, the session status, and related metadata. This does not include the content of your conversations.</li>
       <li><b>Subscription and purchase information:</b> when you make a purchase, payment is processed by Apple App Store or Google Play. We receive confirmation of your purchase status and subscription tier but do not have access to your payment card details or billing address.</li>
-      <li><b>Usage information:</b> features you access, session frequency, and other aggregated and non-identifiable usage data.</li>
-      <li><b>Device information:</b> your device type, operating system version, and app version.</li>
+      <li><b>Device and diagnostic information:</b> your device type, operating system version, and app version, collected through our crash-reporting tool if the app encounters an error.</li>
     </ul>
 
     <h3>Information We Generate from Your Sessions</h3>
     <ul>
       <li><b>Session insights:</b> AI-generated summaries, identified patterns, journal reflections, and breakthrough moments. These are structured fields derived from your session, not raw conversation messages.</li>
     </ul>
-    <p>These insights are stored to support your Journey over time and are accessible only to your account.</p>
+    <p>These insights are stored to support your Journey over time and are accessible only to your account. When we generate insights across more than one session, saved fields from your past sessions, including journal entries, reflection answers, and patterns, are sent to our AI provider again as part of that request.</p>
 
     <h3>Conversation Content and Session Recovery</h3>
-    <p>The conversation content from Ghost, Ex, Grief, Venting, and Letter modes is not intentionally stored on our servers after the session ends. If you leave the app mid-session without completing or burning the session, a temporary recovery copy of your conversation may be retained to allow you to resume where you left off. When you complete or release (burn) the session, that temporary recovery copy is removed from our active systems.</p>
-    <p>Pattern sessions saved by Sacred Members are stored until you choose to delete them.</p>
+    <p>The conversation content from Ghost, Ex, Grief, and Venting modes is not intentionally stored on our servers. If you leave the app mid-session without completing or burning it, a copy of the conversation is kept on your own device so you can resume where you left off; our servers receive only metadata about that session, such as its status and mode, never the conversation itself. When you complete or release (burn) the session, that on-device copy is removed.</p>
+    <p>Letter Companion content you keep is saved to our servers, and remains there until you burn it or delete it. Pattern sessions saved by Sacred Members are also stored until you choose to delete them.</p>
+    <p>While a conversation is active, its content is sent to our AI provider, Anthropic, to generate responses. Anthropic automatically deletes this content from its systems within 30 days, except where it is flagged under their usage policies or retention is required by law, in which case they may retain it longer. See <a href="#third-party" style="color:var(--purple-dim);">Third-Party Services</a> below.</p>
   </div>
 
   <div class="legal-section">
@@ -334,9 +337,9 @@
       <li>Allow you to track your emotional journey over time.</li>
       <li>Process purchases and manage your subscription.</li>
       <li>Send transactional emails such as account confirmation, password reset, and welcome messages.</li>
-      <li>Understand how the app is used, in aggregated and non-identifiable form, to improve reliability and develop new features.</li>
+      <li>Diagnose and fix errors, using crash and performance data.</li>
     </ul>
-    <p>We do not use conversation content to train, fine-tune, or improve AI models. We do not sell or share your personal information for advertising purposes.</p>
+    <p>Under our AI provider's terms, your conversation content is not used to train, fine-tune, or improve their models. We do not sell or share your personal information for advertising purposes.</p>
   </div>
 
   <div class="legal-section">
@@ -350,22 +353,23 @@
   </div>
 
   <div class="legal-section">
-    <h2>Third-Party Services</h2>
+    <h2 id="third-party">Third-Party Services</h2>
     <p>To provide and improve our services, we rely on carefully selected third-party service providers who may process personal data on our behalf. These providers are contractually obligated to protect your information and comply with applicable data protection regulations.</p>
     <ul>
-      <li><b>Anthropic</b> — AI processing for session responses. Anthropic does not use API inputs to train models. <a href="https://anthropic.com/privacy" target="_blank" style="color:var(--purple-dim);">Privacy Policy</a></li>
+      <li><b>Anthropic</b> — generates AI session responses and Journey insights. Anthropic does not use API inputs to train models, and automatically deletes them within 30 days except where flagged under their usage policies or required by law. <a href="https://anthropic.com/privacy" target="_blank" style="color:var(--purple-dim);">Privacy Policy</a></li>
       <li><b>Supabase</b> — Database hosting and authentication. <a href="https://supabase.com/privacy" target="_blank" style="color:var(--purple-dim);">Privacy Policy</a></li>
+      <li><b>Sentry</b> — Crash and error diagnostics. <a href="https://sentry.io/privacy/" target="_blank" style="color:var(--purple-dim);">Privacy Policy</a></li>
+      <li><b>Upstash</b> — Rate limiting, to prevent abuse of the service. <a href="https://upstash.com/privacy" target="_blank" style="color:var(--purple-dim);">Privacy Policy</a></li>
       <li><b>Resend</b> — Transactional email delivery. <a href="https://resend.com/legal/privacy-policy" target="_blank" style="color:var(--purple-dim);">Privacy Policy</a></li>
       <li><b>RevenueCat</b> — In-app purchase management. <a href="https://www.revenuecat.com/privacy" target="_blank" style="color:var(--purple-dim);">Privacy Policy</a></li>
       <li><b>Apple</b> — iOS app distribution and payment processing. <a href="https://www.apple.com/legal/privacy" target="_blank" style="color:var(--purple-dim);">Privacy Policy</a></li>
-      <li><b>Google</b> — Android app distribution and payment processing. <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--purple-dim);">Privacy Policy</a></li>
     </ul>
   </div>
 
   <div class="legal-section">
     <h2>Data Retention</h2>
     <p>We retain account information and session records for as long as your account remains active or as necessary to provide the services described in this policy. Saved Pattern sessions remain available until you delete them. Temporary recovery copies of unfinished sessions are retained only as long as necessary to allow you to resume.</p>
-    <p>When your account is deleted, associated data is removed from our active systems and scheduled for removal from backups in accordance with our retention practices.</p>
+    <p>When your account is deleted, associated data is removed from our active systems and scheduled for removal from backups in accordance with our retention practices. A limited record may be kept to prevent abuse of free trial offers.</p>
   </div>
 
   <div class="legal-section">
@@ -376,12 +380,15 @@
   </div>
 
   <div class="legal-section">
+    <h2>Sensitive and Health-Related Information</h2>
+    <p>Sacred Closure is a tool for emotional processing, and the information you share, including mood scores, somatic check-ins, and what you discuss in a session, can reveal sensitive details about your mental and emotional health. We treat this information with particular care, and do not use it for advertising or share it for any purpose other than providing the app's features, as described in this policy.</p>
+
     <h2>Your Rights and Choices</h2>
     <ul>
       <li><b>Access:</b> you can view your account information and session history within the app.</li>
-      <li><b>Deletion:</b> you can delete individual sessions, insights, and your entire account at any time. Account deletion permanently removes all associated data.</li>
+      <li><b>Deletion:</b> you can delete individual sessions, insights, and your entire account at any time. See <i>Data Retention</i> above for what this removes and what, if anything, is retained.</li>
       <li><b>Correction:</b> you can update your display name and pronoun at any time from your Profile.</li>
-      <li><b>Portability:</b> contact us at privacy@sacredclosure.com if you would like a copy of your data.</li>
+      <li><b>Portability:</b> contact us at privacy@sacredclosure.com if you would like a copy of your data. We will respond within 30 days.</li>
     </ul>
   </div>
 
@@ -392,6 +399,9 @@
 
     <h3>Other U.S. States</h3>
     <p>If you reside in Colorado, Connecticut, Utah, Virginia, or other states with comprehensive privacy laws, you may have similar rights. Contact us at privacy@sacredclosure.com.</p>
+
+    <h3>Washington State</h3>
+    <p>If you are a Washington resident, our handling of consumer health data is also described in our separate <a href="/consumer-health-data-policy" style="color:var(--purple-dim);">Consumer Health Data Privacy Policy</a>, as required by Washington's My Health My Data Act.</p>
 
     <h3>Canada (PIPEDA)</h3>
     <p>Canadian residents have the right to access their personal information, challenge its accuracy, and withdraw consent. Contact us at privacy@sacredclosure.com.</p>
@@ -423,8 +433,9 @@
 <footer>
   <div class="footer-left">Sacred Closure &nbsp;&middot;&nbsp; 33 Catalyst Ventures &nbsp;&middot;&nbsp; 2026</div>
   <ul class="footer-links">
-    <li><a href="/privacy.html">Privacy Policy</a></li>
-    <li><a href="/terms.html">Terms of Service</a></li>
+    <li><a href="/privacy">Privacy Policy</a></li>
+    <li><a href="/consumer-health-data-policy">Consumer Health Data Policy</a></li>
+    <li><a href="/terms">Terms of Service</a></li>
     <li><a href="mailto:hello@sacredclosure.com">Contact</a></li>
   </ul>
 </footer>

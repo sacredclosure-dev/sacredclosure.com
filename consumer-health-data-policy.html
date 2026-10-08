@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@300;400&display=swap" rel="stylesheet">
+<title>Consumer Health Data Privacy Policy | Sacred Closure</title>
+<style>
+  :root {
+    --bg: #01000a;
+    --purple: #A78BCA;
+    --purple-dim: rgba(167,139,202,0.45);
+    --purple-faint: rgba(167,139,202,0.12);
+    --gold: rgba(196,160,80,0.85);
+    --gold-dim: rgba(196,160,80,0.5);
+    --white: rgba(245,245,247,0.95);
+    --white-dim: rgba(220,200,255,0.72);
+    --white-faint: rgba(220,200,255,0.45);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: twinkle var(--d, 4s) ease-in-out infinite var(--delay, 0s);
+    opacity: 0;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: var(--max-op, 0.4); }
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(1,0,10,0.9) 0%, transparent 100%);
+  }
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: var(--purple-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav-logo:hover { color: var(--purple); }
+
+  .legal-container {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 140px 32px 120px;
+  }
+
+  .legal-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .legal-title {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 300;
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .legal-date {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: rgba(167,139,202,0.85);
+    text-align: center;
+    display: block;
+    margin-bottom: 64px;
+  }
+
+  .legal-divider {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent, rgba(167,139,202,0.3), transparent);
+    margin: 48px auto;
+  }
+
+  .legal-section {
+    margin-bottom: 48px;
+  }
+
+  .legal-section-number {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .legal-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(13px, 2vw, 15px);
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .legal-section h3 {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white-dim);
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+
+  .legal-section p {
+    font-size: 16px;
+    color: rgba(220,200,255,0.72);
+    line-height: 1.85;
+    margin-bottom: 16px;
+  }
+
+  .legal-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+  }
+
+  .legal-section ul li {
+    font-size: 16px;
+    color: rgba(220,200,255,0.72);
+    line-height: 1.85;
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+
+  .legal-card {
+    background: rgba(14,8,32,0.55);
+    border: 1px solid rgba(167,139,202,0.1);
+    border-radius: 24px;
+    padding: 48px 40px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin-bottom: 48px;
+  }
+
+  .legal-card .legal-section {
+    margin-bottom: 36px;
+  }
+
+  .legal-card .legal-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .legal-section ul li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: var(--purple-dim);
+  }
+
+  .legal-section ul li b, .legal-section strong {
+    color: var(--white-dim);
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .legal-contact {
+    background: rgba(14,8,32,0.6);
+    border: 1px solid rgba(167,139,202,0.12);
+    border-radius: 20px;
+    padding: 32px 28px;
+    margin-top: 16px;
+  }
+
+  .legal-contact p {
+    margin-bottom: 8px;
+  }
+
+  .legal-contact a {
+    color: var(--purple-dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .legal-contact a:hover { color: var(--purple); }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    padding: 40px 48px;
+    border-top: 1px solid rgba(167,139,202,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-left {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: rgba(167,139,202,0.65);
+    text-transform: uppercase;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .footer-links a {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(167,139,202,0.65);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover { color: rgba(167,139,202,0.9); }
+
+  @media (max-width: 640px) {
+    nav { padding: 20px 24px; }
+    .legal-container { padding: 120px 24px 80px; }
+    footer { flex-direction: column; text-align: center; padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="stars" id="stars"></div>
+
+<nav>
+  <a href="/" class="nav-logo">Sacred Closure</a>
+</nav>
+<div class="legal-container">
+
+  <h1 class="legal-title">Consumer Health Data Privacy Policy</h1>
+  <span class="legal-date">Effective Date: October 4, 2026</span>
+
+  <div class="legal-divider"></div>
+
+  <div class="legal-card">
+  <div class="legal-section">
+    <p>This Consumer Health Data Privacy Policy supplements our general <a href="/privacy" style="color:var(--purple-dim);">Privacy Policy</a> and describes how Sacred Closure handles consumer health data covered by Washington's My Health My Data Act.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>What Is Consumer Health Data?</h2>
+    <p>Under Washington law, consumer health data includes personal information that identifies or may reveal information about a person's physical or mental health.</p>
+    <p>Because Sacred Closure provides tools for emotional processing and reflection, some information you choose to share may qualify as consumer health data.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Consumer Health Data We Collect</h2>
+    <p>Depending on how you use Sacred Closure, consumer health data may include:</p>
+    <p><b>Session content:</b> Information you choose to share during a session that may reveal information about your mental or emotional health.</p>
+    <p><b>Mood scores:</b> Mood ratings you provide before and after a session.</p>
+    <p><b>Somatic check-ins:</b> Information you provide about where you experience feelings or sensations in your body.</p>
+    <p><b>Reflection responses:</b> Your written responses to reflection questions.</p>
+    <p><b>Session insights:</b> Summaries, patterns, reflections, and other insights generated from your sessions.</p>
+    <p>We receive this information directly from you through your use of Sacred Closure. We do not purchase consumer health data about you from data brokers or other outside sources.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>How We Use Consumer Health Data</h2>
+    <p>We process consumer health data as necessary to provide the Sacred Closure features you request, including:</p>
+    <ul>
+      <li>Generating responses during sessions</li>
+      <li>Creating session insights and reflections</li>
+      <li>Providing mood and somatic reflections</li>
+      <li>Building your Journey and displaying insights you have chosen to retain</li>
+      <li>Saving information you choose to keep as part of your account</li>
+    </ul>
+    <p>We do not sell consumer health data or use it for third-party advertising.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Session Conversations and Retention</h2>
+    <p>Session conversations in Ghost, Ex, Grief, and Venting modes are processed to provide the session experience but are not retained on our servers after the session is completed. A temporary copy may remain on your device so you can resume an unfinished session.</p>
+    <p>Pattern mode conversations are retained only when you choose to save them.</p>
+    <p>Mood scores, somatic check-ins, reflection responses, and generated insights may be retained as part of your Journey so you can review what you have learned over time.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Service Providers</h2>
+    <p>We use service providers to operate Sacred Closure and provide features you request. These may include:</p>
+    <p><b>Anthropic:</b> Processes session content to generate conversational responses and session insights.</p>
+    <p><b>Supabase:</b> Provides database and backend infrastructure used to store information associated with your account.</p>
+    <p>Our service providers process information on our behalf and are not authorized by us to use your consumer health data for their own independent advertising or marketing purposes.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>How Long We Keep Consumer Health Data</h2>
+    <p>Mood scores, somatic check-ins, reflection responses, and retained insights are generally kept while your account remains active so they can remain available in your Journey.</p>
+    <p>When a session is burned or completed, conversation content that is not designated to be retained is deleted in accordance with our retention practices.</p>
+    <p>If you delete your account or request deletion of your consumer health data, we will process the deletion in accordance with applicable law and the retention practices described in our Privacy Policy.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Your Consumer Health Data Rights</h2>
+    <p>Where applicable, you may have the right to:</p>
+    <ul>
+      <li>Confirm whether we collect, share, or sell consumer health data about you</li>
+      <li>Access consumer health data associated with you</li>
+      <li>Request information about third parties or affiliates with whom your consumer health data has been shared or sold</li>
+      <li>Request deletion of your consumer health data</li>
+      <li>Withdraw consent where our processing relies on your consent</li>
+    </ul>
+    <p>You may exercise these rights by contacting us through the method provided in our Privacy Policy.</p>
+    <p>We will not unlawfully discriminate against you for exercising your consumer health data privacy rights.</p>
+    <p>If we deny a request, you may appeal that decision by contacting us using the same method and indicating that you are appealing a consumer health data privacy decision.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>How to Reach Us</h2>
+    <div class="legal-contact">
+      <p>Sacred Closure</p>
+      <p><a href="mailto:privacy@sacredclosure.com">privacy@sacredclosure.com</a> — consumer health data requests</p>
+    </div>
+  </div>
+
+  <div class="legal-section">
+    <h2>Changes to This Policy</h2>
+    <p>If we materially change the categories of consumer health data we collect or the purposes for which we collect, use, or share that information, we will update this policy and obtain consent where required by applicable law.</p>
+  </div>
+  </div>
+
+</div>
+<footer>
+  <div class="footer-left">Sacred Closure &nbsp;&middot;&nbsp; 33 Catalyst Ventures &nbsp;&middot;&nbsp; 2026</div>
+  <ul class="footer-links">
+    <li><a href="/privacy">Privacy Policy</a></li>
+    <li><a href="/consumer-health-data-policy">Consumer Health Data Policy</a></li>
+    <li><a href="/terms">Terms of Service</a></li>
+    <li><a href="mailto:hello@sacredclosure.com">Contact</a></li>
+  </ul>
+</footer>
+
+<script>
+  const container = document.getElementById('stars');
+  for (let i = 0; i < 100; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    const size = Math.random() * 1.8 + 0.4;
+    star.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--d:${Math.random()*5+3}s;--delay:-${Math.random()*8}s;--max-op:${Math.random()*0.4+0.1};`;
+    container.appendChild(star);
+  }
+</script>
+</body>
+</html>
